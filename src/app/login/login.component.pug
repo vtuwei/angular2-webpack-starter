@@ -1,0 +1,27 @@
+.login
+  .main-wrapper
+    section.wrapper
+      section.box(style='box-shadow:none;')
+        div.container
+          .banner(style='margin-bottom:20px;')
+            .logo-area.center
+            .clear
+            .region.pull-left AMPATH AMRS Point of CARE.
+          header.panel_header
+            h5.title.pull-left Please login to proceed
+          .content-body.padding-bottom-30
+            .rows
+              form.margin-bottom-0(role='form', (submit)='login($event, username.value, password.value)')
+                .form-group-lg.m-b-20
+                  input#username.input-large(type='text', #username='', placeholder='Username')
+                .form-group-lg.m-b-20
+                  input#password.input-large(type='password', #password='', placeholder='Password')
+                .login-buttons
+                  button.btn.indigo.btn-large(type='submit') Sign in
+                  button.btn.indigo.btn-large.pull-right(type='submit') Server Settings
+                .clear
+              .error {{error}}
+  .navbar.navbar-default.navbar-fixed-bottom
+    .footer.container-fluid
+      span.pull-right
+        span Version 1
